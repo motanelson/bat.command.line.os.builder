@@ -91,14 +91,14 @@ kernel:
 nop 
 
 b32:
-    mov ax, DATA_SEG
-    mov ds, ax
-    mov es, ax
+    mov ax, DATA_SEG   
     mov fs, ax
     mov gs, ax
     mov ss, ax
-    
-    mov ebp, 0x90000
+    mov ax,8
+    mov ds, ax
+    mov es, ax
+    mov ebp, 0x80000
     mov esp, ebp
     
     ;start eax ebx ecx edx to enter on program
